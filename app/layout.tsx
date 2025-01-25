@@ -8,7 +8,7 @@ import { IndicationsSession } from "./sessions/indications.session";
 import { HeaderComponent } from "./components/header.component";
 import { HomeSession } from "./sessions/home.session";
 import { AboutSession } from "./sessions/about.session";
-import { ProjectSection } from "./sessions/project.session";
+import { ProjectSession } from "./sessions/project.session";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -80,6 +80,8 @@ export default function RootLayout() {
         <HeaderComponent />
         <HomeSession />
         <AboutSession />
+        <ProjectSession />
+        <IndicationsSession />
         <BuilderSession />
         <FooterComponent />
       </body>
