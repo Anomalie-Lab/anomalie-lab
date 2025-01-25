@@ -10,6 +10,7 @@ import { HomeSession } from "./sessions/home.session";
 import { AboutSession } from "./sessions/about.session";
 import { ProjectSession } from "./sessions/project.session";
 import { Providers } from "./providers/provider";
+import { BackToTop } from "./components/back-top.componet";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -89,6 +90,7 @@ export default function RootLayout() {
           <IndicationsSession />
           <BuilderSession />
           <FooterComponent />
+          <BackToTop/>
         </body>
       </Providers>
     </html>
