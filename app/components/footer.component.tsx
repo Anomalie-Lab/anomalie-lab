@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { InfoCircleOutlined } from "@ant-design/icons";
-import { Input, Tooltip } from "antd";
+import { Input } from "antd";
 import Link from "next/link";
 import {
   LiaLinkedin,
