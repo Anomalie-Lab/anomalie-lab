@@ -12,7 +12,7 @@ export function HomeSession() {
 
   return (
     <section className="uppercase font-semibold">
-      <motion.h1 ref={ref1} initial={{ opacity: 0, y: 250 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 250 }} transition={{ duration: 0.5, delay: 0.5 }} className="text-[230px] h-56 flex relative items-center right-4  justify-between">
+      <motion.h1 ref={ref1} initial={{ opacity: 0, y: 100 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }} transition={{ duration: 0.5, delay: 0.5 }} className="text-[230px] h-56 flex relative items-center right-4  justify-between">
         Lab.
       </motion.h1>
       <div className="bg-[url('/artHome.jpg')] h-96 bg-cover bg-center z-20 relative"></div>
