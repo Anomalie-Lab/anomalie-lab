@@ -1,48 +1,31 @@
 "use client";
-import { useState, useRef } from "react";
-import { PiPlayFill } from "react-icons/pi";
+import React, { useEffect, useRef } from "react";
+import Plyr from "plyr";
+import "plyr/dist/plyr.css";
 
 export function ProjectSession() {
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handlePlay = () => {
-    if (videoRef.current && !isPlaying) {
-      videoRef?.current?.play();
-      setIsPlaying(true);
+  useEffect(() => {
+    if (videoRef.current) {
+      const player = new Plyr(videoRef.current, {
+        controls: ["play"],
+      });
+
+      return () => {
+        player.destroy();
+      };
     }
-  };
+  }, []);
 
   return (
-    <section className="flex justify-between items-center h-[600px]">
-      <div>
-        <h1 className="text-4xl uppercase font-semibold relative left-24">
-          Projects
-        </h1>
-        <div className="mt-12 relative">
-          <video
-            width="650px"
-            height="400px"
-            ref={videoRef}
-            className="cover"
-            poster={"/thumbnail.png"}
-            onPlay={handlePlay}
-          >
-            <source src={"/videoTest.mp4"} type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-          {!isPlaying && (
-            <button
-              className="absolute inset-0 flex justify-center items-center"
-              onClick={handlePlay}
-            >
-              <PiPlayFill className="text-5xl text-white" />
-            </button>
-          )}
-        </div>
-      </div>
-      <div className="flex justify-end items-end">
-        <h1 className="text-5xl font-black transform rotate-90 ">Showcase</h1>
+    <section>
+      <h1 className="text-4xl uppercase font-semibold relative left-24">Projects</h1>
+      <div className="mt-12 relative flex items-center justify-between">
+        <video ref={videoRef} className="max-w-[850px] object-cover min-h-[600px]" poster="/thumbnail.png" controls>
+          <source src="videoTest.mp4" type="video/mp4" />
+        </video>
+        <h1 className="text-5xl font-black transform rotate-90 mr-[-93px]">Showcase</h1>
       </div>
     </section>
   );

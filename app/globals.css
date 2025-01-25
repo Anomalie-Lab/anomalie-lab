@@ -27,3 +27,24 @@ html {
 .button-next-indication:hover::after {
   padding: 36px;
 }
+
+.plyr__controls {
+  transform: translate(-50%, -50%) !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.plyr__control {
+  margin-left: auto !important;
+}
+
+.plyr__control:hover {
+  background: none !important;
+}
+
+.plyr__control svg {
+  width: 70px !important;
+  height: 70px !important;
+}
