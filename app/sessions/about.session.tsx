@@ -19,28 +19,28 @@ export function AboutSession() {
   const items = [
     {
       key: "1",
-      label: <h2 className="pb-2 px-6 text-base">Interviews</h2>,
+      label: <h2 className="pb-2 text-base px-[60px]">Interviews</h2>,
       children: <AnimatedTabContent>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</AnimatedTabContent>,
     },
     {
       key: "2",
-      label: <h2 className="pb-2 px-6 text-base">Awards</h2>,
+      label: <h2 className="pb-2 text-base px-[60px]">Awards</h2>,
       children: <AnimatedTabContent>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</AnimatedTabContent>,
     },
     {
       key: "3",
-      label: <h2 className="pb-2 px-6 text-base">Social</h2>,
+      label: <h2 className="pb-2 text-base px-[60px]">Social</h2>,
       children: <AnimatedTabContent>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</AnimatedTabContent>,
     },
     {
       key: "4",
-      label: <h2 className="pb-2 px-6 text-base">Exibitions</h2>,
+      label: <h2 className="pb-2 text-base px-[60px]">Exibitions</h2>,
       children: <AnimatedTabContent>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</AnimatedTabContent>,
     },
   ];
 
   return (
-    <div className="max-w-[750px] mx-auto p-4">
+    <section className="max-w-[750px] mx-auto p-4">
       <ConfigProvider
         theme={{
           token: {
@@ -53,12 +53,15 @@ export function AboutSession() {
               itemSelectedColor: "rgba(0,0,0,0.88)",
               itemHoverColor: "rgba(0,0,0,0.88)",
               itemColor: "rgba(0,0,0,0.88)",
+              cardPadding: " 0px 20px",
+              verticalItemMargin: "0 0 0 0",
+              verticalItemPadding: "0 0 0 0",
             },
           },
         }}
       >
         <Tabs centered animated defaultActiveKey="1" items={items} />
       </ConfigProvider>
-    </div>
+    </section>
   );
 }

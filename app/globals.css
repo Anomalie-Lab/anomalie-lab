@@ -6,6 +6,9 @@ html {
   scroll-behavior: smooth;
 }
 
-.ant-tabs-content-holder{
+.ant-tabs-content-holder {
   margin-top: 45px;
+}
+.ant-tabs-tab {
+  margin: 0 !important;
 }

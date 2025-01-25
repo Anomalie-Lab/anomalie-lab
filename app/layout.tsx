@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "antd/dist/reset.css";
 import "./globals.css";
-import { Footer } from "./components/footer.component";
+import { FooterComponent } from "./components/footer.component";
 import { AboutSession } from "./sessions/about.session";
 import { BuilderSession } from "./sessions/builder.session";
-import { HomeSection } from "./sessions/home.session";
 import { HeaderComponent } from "./components/header.component";
+import { IndicationsSession } from "./sessions/indications.session";
+import { HomeSession } from "./sessions/home.session";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,10 +26,11 @@ export default function RootLayout() {
       <head>{/* Metadata or other head elements */}</head>
       <body className={`${inter.variable} antialiased h-fit max-w-[1250px] mx-auto flex flex-col gap-28`}>
         <HeaderComponent />
-        <HomeSection />
+        <HomeSession />
         <AboutSession />
+        <IndicationsSession />
         <BuilderSession />
-        <Footer />
+        <FooterComponent />
       </body>
     </html>
   );
