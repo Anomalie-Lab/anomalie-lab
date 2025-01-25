@@ -87,8 +87,8 @@ export function IndicationsSession() {
   ];
 
   return (
-    <section className="relative h-[600px] mt-36">
-      <h2 className="font-bold relative right-14 text-4xl w-full text-end">
+    <section className="relative h-[600px] mt-64">
+      <h2 className="font-bold relative right-44 text-4xl w-full text-end">
         INDICATIONS
       </h2>
       <div className="absolute bottom-0 right-9 z-50">

@@ -3,7 +3,9 @@ import { motion, useInView } from "framer-motion";
 import { ConfigProvider, Tabs } from "antd";
 import React, { useRef } from "react";
 
-const AnimatedTabContent: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const AnimatedTabContent: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -13,12 +15,12 @@ const AnimatedTabContent: React.FC<{ children: React.ReactNode }> = ({ children 
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="mx-auto mt-12"
+      className="mx-auto"
     >
-      <h3 className="text-4xl w-1/2 text-center mx-auto font-bold">
+      <h3 className="text-4xl w-1/2 text-center mx-auto font-bold mt-12">
         WHAT IS LOREM IPSUM WHAT.
       </h3>
-      <div className="mx-20 mt-12 font-medium text-xl text-justify">
+      <div className=" mt-16 text-xl text-justify font-semibold">
         {children}
       </div>
     </motion.div>
@@ -29,10 +31,10 @@ export function AboutSession() {
   const items = [
     {
       key: "1",
-      label: <h2 className="pb-2  text-lg">Interviews</h2>,
+      label: <h2 className="pb-2 text-base px-[60px]">Interviews</h2>,
       children: (
         <AnimatedTabContent>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+          Lorem Ipsumis simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
@@ -43,10 +45,10 @@ export function AboutSession() {
     },
     {
       key: "2",
-      label: <h2 className="pb-2  text-lg">Awards</h2>,
+      label: <h2 className="pb-2 text-base px-[60px]">Awards</h2>,
       children: (
         <AnimatedTabContent>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+          Lorem Ipsumis simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
@@ -57,10 +59,10 @@ export function AboutSession() {
     },
     {
       key: "3",
-      label: <h2 className="pb-2 text-lg">Social</h2>,
+      label: <h2 className="pb-2 text-base px-[60px]">Social</h2>,
       children: (
         <AnimatedTabContent>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+          Lorem Ipsumis simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
@@ -71,10 +73,10 @@ export function AboutSession() {
     },
     {
       key: "4",
-      label: <h2 className="pb-2 text-lg">Exibitions</h2>,
+      label: <h2 className="pb-2 text-base px-[60px]">Exibitions</h2>,
       children: (
         <AnimatedTabContent>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+          Lorem Ipsumis simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
@@ -86,7 +88,7 @@ export function AboutSession() {
   ];
 
   return (
-    <section className="max-w-[750px] mx-auto p-4 flex">
+    <section className="max-w-[750px] mx-auto p-4  h-[750px]">
       <ConfigProvider
         theme={{
           token: {
