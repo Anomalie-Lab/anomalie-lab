@@ -88,7 +88,7 @@ export function AboutSession() {
   ];
 
   return (
-    <div className="max-w-[750px] mx-auto p-4 flex">
+    <section className="max-w-[750px] mx-auto p-4 flex">
       <ConfigProvider
         theme={{
           token: {
@@ -101,6 +101,9 @@ export function AboutSession() {
               itemSelectedColor: "rgba(0,0,0,0.88)",
               itemHoverColor: "rgba(0,0,0,0.88)",
               itemColor: "rgba(0,0,0,0.88)",
+              cardPadding: " 0px 20px",
+              verticalItemMargin: "0 0 0 0",
+              verticalItemPadding: "0 0 0 0",
             },
           },
         }}
@@ -113,6 +116,6 @@ export function AboutSession() {
           className=""
         />
       </ConfigProvider>
-    </div>
+    </section>
   );
 }

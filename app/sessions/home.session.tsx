@@ -1,7 +1,7 @@
 import { LiaArrowRightSolid } from "react-icons/lia";
-export function HomeSection() {
+export function HomeSession() {
   return (
-    <div className="uppercase font-semibold">
+    <section className="uppercase font-semibold">
       <h1 className="text-[230px]  h-56 flex relative items-center right-4  justify-between">Lab.</h1>
       <div className="bg-[url('/artHome.jpg')] h-96 bg-cover bg-center z-20 relative"></div>
       <div className="flex items-center justify-between">
@@ -13,6 +13,6 @@ export function HomeSection() {
           </div>
         </button>
       </div>
-    </div>
+    </section>
   );
 }

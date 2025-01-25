@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-export function Footer() {
+export function FooterComponent() {
   return (
     <footer className="flex w-full justify-between">
       <div className="flex flex-col gap-7">
