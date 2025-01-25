@@ -9,6 +9,7 @@ import { HeaderComponent } from "./components/header.component";
 import { HomeSession } from "./sessions/home.session";
 import { AboutSession } from "./sessions/about.session";
 import { ProjectSession } from "./sessions/project.session";
+import { Providers } from "./providers/provider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -79,15 +80,17 @@ export default function RootLayout() {
   return (
     <html lang="en">
       <head>{/* Metadata or other head elements */}</head>
-      <body className={`${inter.variable} antialiased h-fit max-w-[1250px] mx-auto flex flex-col`}>
-        <HeaderComponent />
-        <HomeSession />
-        <AboutSession />
-        <ProjectSession />
-        <IndicationsSession />
-        <BuilderSession />
-        <FooterComponent />
-      </body>
+      <Providers>
+        <body className={`${inter.variable} antialiased h-fit max-w-[1250px] mx-auto flex flex-col`}>
+          <HeaderComponent />
+          <HomeSession />
+          <AboutSession />
+          <ProjectSession />
+          <IndicationsSession />
+          <BuilderSession />
+          <FooterComponent />
+        </body>
+      </Providers>
     </html>
   );
 }
