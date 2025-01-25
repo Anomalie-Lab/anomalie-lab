@@ -17,11 +17,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.anomalielab.com.br"),
   title: "Anomalie Lab - Desenvolvimento de Sites e Apps",
-  description:
-    "Especialistas em criação de sites e aplicativos personalizados, com soluções inovadoras e foco em design e experiência do usuário.",
-  viewport: "width=device-width, initial-scale=1.0",
-  themeColor: "#132226",
+  description: "Especialistas em criação de sites e aplicativos personalizados, com soluções inovadoras e foco em design e experiência do usuário.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -30,8 +28,7 @@ export const metadata: Metadata = {
     title: "Anomalie Lab - Desenvolvimento de Sites e Apps",
     siteName: "Anomalie Lab",
     type: "website",
-    description:
-      "Criamos sites e aplicativos personalizados, focados em inovação e excelência. Soluções que atendem às necessidades de nossos clientes.",
+    description: "Criamos sites e aplicativos personalizados, focados em inovação e excelência. Soluções que atendem às necessidades de nossos clientes.",
     url: "https://www.anomalielab.com.br",
     images: [
       {
@@ -74,13 +71,15 @@ export const metadata: Metadata = {
   ],
 };
 
+export const viewport = { width: "device-width", initialScale: 1.0 };
+
+export const themeColor = "#000000";
+
 export default function RootLayout() {
   return (
     <html lang="en">
       <head>{/* Metadata or other head elements */}</head>
-      <body
-        className={`${inter.variable} antialiased h-fit max-w-[1250px] mx-auto flex flex-col`}
-      >
+      <body className={`${inter.variable} antialiased h-fit max-w-[1250px] mx-auto flex flex-col`}>
         <HeaderComponent />
         <HomeSession />
         <AboutSession />
