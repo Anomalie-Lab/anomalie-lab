@@ -31,7 +31,9 @@ export function AboutSession() {
   const items = [
     {
       key: "1",
-      label: <h2 className="pb-2 text-base px-[60px]">Interviews</h2>,
+      label: (
+        <h2 className="pb-2 font-semibold px-[70px] text-lg">Interviews</h2>
+      ),
       children: (
         <AnimatedTabContent>
           Lorem Ipsumis simply dummy text of the printing and typesetting
@@ -45,7 +47,7 @@ export function AboutSession() {
     },
     {
       key: "2",
-      label: <h2 className="pb-2 text-base px-[60px]">Awards</h2>,
+      label: <h2 className="pb-2 font-semibold px-[70px] text-lg">Awards</h2>,
       children: (
         <AnimatedTabContent>
           Lorem Ipsumis simply dummy text of the printing and typesetting
@@ -59,7 +61,7 @@ export function AboutSession() {
     },
     {
       key: "3",
-      label: <h2 className="pb-2 text-base px-[60px]">Social</h2>,
+      label: <h2 className="pb-2 font-semibold px-[70px] text-lg">Social</h2>,
       children: (
         <AnimatedTabContent>
           Lorem Ipsumis simply dummy text of the printing and typesetting
@@ -73,7 +75,9 @@ export function AboutSession() {
     },
     {
       key: "4",
-      label: <h2 className="pb-2 text-base px-[60px]">Exibitions</h2>,
+      label: (
+        <h2 className="pb-2 font-semibold px-[70px] text-lg">Exibitions</h2>
+      ),
       children: (
         <AnimatedTabContent>
           Lorem Ipsumis simply dummy text of the printing and typesetting
@@ -88,7 +92,7 @@ export function AboutSession() {
   ];
 
   return (
-    <section className="max-w-[750px] mx-auto p-4  h-[750px]">
+    <section className="max-w-[900px] mx-auto p-4  h-[700px]">
       <ConfigProvider
         theme={{
           token: {

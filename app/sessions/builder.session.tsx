@@ -6,7 +6,7 @@ export function BuilderSession() {
     <section className="mt-24  h-[600px] flex items-end">
       <div className="p-20 bg-black text-white w-full rounded-xl flex justify-between items-end h-96">
         <h2 className="text-4xl max-w-72 font-medium">
-          Build your ideal workspace today.
+          Quer um projeto único.
         </h2>
         <Link
           href="#"
