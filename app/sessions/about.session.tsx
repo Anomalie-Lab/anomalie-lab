@@ -8,8 +8,8 @@ const AnimatedTabContent: React.FC<{ children: React.ReactNode }> = ({ children 
   const isInView = useInView(ref);
 
   return (
-    <motion.div ref={ref} initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="mx-auto">
-      <h3 className="text-4xl w-1/2 text-center mx-auto font-bold mt-12">WHAT IS LOREM IPSUM WHAT.</h3>
+    <motion.div ref={ref} initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: 0.8 }} className="mx-auto">
+      <h3 className="text-4xl w-1/2 text-center mx-auto font-bold pt-12">WHAT IS LOREM IPSUM WHAT.</h3>
       <div className=" mt-16 text-xl text-justify font-semibold">{children}</div>
     </motion.div>
   );
