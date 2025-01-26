@@ -79,10 +79,9 @@ export const themeColor = "#000000";
 
 export default function RootLayout() {
   return (
-    <html lang="en">
-      <head>{/* Metadata or other head elements */}</head>
+    <html lang="en" className="max-w-screen overflow-x-hidden">
       <Providers>
-        <body className={`${inter.variable} antialiased h-fit max-w-[1250px] mx-auto flex flex-col`}>
+        <body className={`${inter.variable} antialiased h-fit max-w-[1250px] mx-auto flex flex-col px-4`}>
           <HeaderComponent />
           <HomeSession />
           <AboutSession />
@@ -90,7 +89,7 @@ export default function RootLayout() {
           <IndicationsSession />
           <BuilderSession />
           <FooterComponent />
-          <BackToTop/>
+          <BackToTop />
         </body>
       </Providers>
     </html>

@@ -19,17 +19,17 @@ function Indication({
 }) {
   return (
     <div className="flex flex-col gap-8 mt-32 w-full">
-      <Image src="/aspas.png" alt="aspas" width={100} height={100} />
-      <p className="text-4xl font-medium max-w-[590px] text-justify">{slide.feedback}</p>
+      <Image src="/aspas.png" alt="aspas" width={100} height={100} className="max-md:w-12" />
+      <p className="text-4xl font-medium max-w-[590px] text-justify max-lg:text-2xl max-md:text-xl">{slide.feedback}</p>
       <div className="flex w-full justify-between items-center mt-8">
         <div>
-          <div className="flex gap-4 items-center">
-            <p className="font-semibold">{slide.name}</p> |
-            <Link href={slide.href} target="_blank" className="underline text-xs h-fit">
+          <div className="flex gap-4 items-center max-md:flex-col-reverse max-md:gap-2">
+            <p className="font-semibold">{slide.name}</p> <span className="max-md:hidden">|</span>
+            <Link href={slide.href} target="_blank" className="underline text-xs h-fit max-md:-ml-4">
               {slide.social}
             </Link>
           </div>
-          <p className="text-sm mt-2">{slide.job}</p>
+          <p className="text-sm mt-2 max-md:text-xs text-end max-md:mt-1">{slide.job}</p>
         </div>
       </div>
     </div>
@@ -76,10 +76,10 @@ export function IndicationsSession() {
   ];
 
   return (
-    <section className="relative h-[600px] mt-64">
-      <h2 className="font-bold relative right-44 text-4xl w-full text-end">INDICATIONS</h2>
-      <div className="absolute bottom-0 right-9 z-50">
-        <button className="swiper-button-next button-next-indication p-7 bg-white text-4xl border-2 rounded-full relative duration-400 ease-linear hover:bg-black hover:text-white" aria-label="Next Slide">
+    <section className="relative mt-64">
+      <h2 className="font-bold relative text-4xl w-[90%] max-md:text-3xl text-end max-md:-mb-16">INDICATIONS</h2>
+      <div className="absolute bottom-0 right-9 z-50 max-lg:bottom-6">
+        <button className="swiper-button-next button-next-indication p-7 bg-white text-4xl border-2 rounded-full relative duration-400 ease-linear hover:bg-black hover:text-white max-md:p-2 max-md:text-2xl" aria-label="Next Slide">
           <LiaLongArrowAltRightSolid />
         </button>
       </div>

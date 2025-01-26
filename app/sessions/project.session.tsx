@@ -27,13 +27,13 @@ export function ProjectSession() {
   }, []);
 
   return (
-    <section>
-      <h1 className="text-4xl uppercase font-bold relative left-24">Projects</h1>
-      <div className="mt-14 relative flex items-center justify-between">
-        <video ref={videoRef} className="max-w-[700px] object-cover min-h-[450px]" poster="/thumbnail.png" controls>
+    <section className="relative overflow-hidden pb-12">
+      <h1 className="text-4xl uppercase font-bold relative left-24 max-md:text-2xl max-md:left-12">Projects</h1>
+      <div className="mt-14 flex items-center justify-between max-md:mt-5">
+        <h1 className="text-6xl font-black transform rotate-90 uppercase absolute -right-36 top-3/5 max-lg:mr-0">Showcase</h1>
+        <video ref={videoRef} className="max-w-[700px] object-cover min-h-[450px] max-lg:max-w-[90vw] max-md:min-h-[200px] max-sm:min-h-[300px] max-sm:max-lg:max-w-[85vw]  z-10" poster="/thumbnail.png" controls>
           <source src="videoTest.mp4" type="video/mp4" />
         </video>
-        <h1 className="text-6xl font-black transform rotate-90 mr-[-93px] uppercase">Showcase</h1>
       </div>
     </section>
   );

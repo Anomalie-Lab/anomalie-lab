@@ -10,7 +10,7 @@ export function HeaderComponent() {
   return (
     <header className="w-full h-32 flex text-sm justify-between items-center font-semibold uppercase">
       <Image src="/logo.png" width={50} height={190} alt="Logo" />
-      <ul className="flex gap-20">
+      <ul className="flex gap-20 max-md:hidden">
         <li>
           <Link href="#" className="menu__link">
             Projects
