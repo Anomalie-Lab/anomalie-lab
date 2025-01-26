@@ -2,6 +2,7 @@
 import { motion, useInView } from "framer-motion";
 import { ConfigProvider, Tabs } from "antd";
 import React, { useRef } from "react";
+import { trans } from "../libs/i18n.lib";
 
 const AnimatedTabContent: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -31,64 +32,52 @@ export function AboutSession() {
   const items = [
     {
       key: "1",
-      label: <h2 className="pb-2 text-base px-[60px]">Interviews</h2>,
+      label: (
+        <h2 className="pb-2 text-base px-[60px]">{trans.t("Sobre Nós")}</h2>
+      ),
       children: (
-        <AnimatedTabContent>
-          Lorem Ipsumis simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not
-          only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
-        </AnimatedTabContent>
+        <AnimatedTabContent>{trans.t("Sobre Nos copy")}</AnimatedTabContent>
       ),
     },
     {
       key: "2",
-      label: <h2 className="pb-2 text-base px-[60px]">Awards</h2>,
+      label: (
+        <h2 className="pb-2 text-base px-[60px]">
+          {trans.t("Nosso Propósito")}
+        </h2>
+      ),
       children: (
         <AnimatedTabContent>
-          Lorem Ipsumis simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not
-          only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
+          {trans.t("Nosso Propósito copy")}
         </AnimatedTabContent>
       ),
     },
     {
       key: "3",
-      label: <h2 className="pb-2 text-base px-[60px]">Social</h2>,
+      label: (
+        <h2 className="pb-2 text-base px-[60px]">
+          {trans.t("Como Trabalhamos")}
+        </h2>
+      ),
       children: (
         <AnimatedTabContent>
-          Lorem Ipsumis simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not
-          only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
+          {trans.t("Como trabalhamos copy")}
         </AnimatedTabContent>
       ),
     },
     {
       key: "4",
-      label: <h2 className="pb-2 text-base px-[60px]">Exibitions</h2>,
+      label: (
+        <h2 className="pb-2 text-base px-[60px]">{trans.t("Resultados")}</h2>
+      ),
       children: (
-        <AnimatedTabContent>
-          Lorem Ipsumis simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not
-          only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
-        </AnimatedTabContent>
+        <AnimatedTabContent>{trans.t("Resultados copy")}</AnimatedTabContent>
       ),
     },
   ];
 
   return (
-    <section className="max-w-[900px] mx-auto p-4  h-[700px]">
+    <section className="max-w-[1000px] mx-auto p-4  h-[700px]">
       <ConfigProvider
         theme={{
           token: {
