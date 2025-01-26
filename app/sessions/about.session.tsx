@@ -18,10 +18,10 @@ const AnimatedTabContent: React.FC<{ children: React.ReactNode }> = ({
       transition={{ duration: 0.8 }}
       className="mx-auto"
     >
-      <h3 className="text-4xl w-1/2 text-center mx-auto font-bold pt-12">
+      <h3 className="text-4xl w-1/2 text-center mx-auto font-bold pt-12 max-md:text-3xl max-md:pt-2 max-md:w-2/3">
         WHAT IS LOREM IPSUM WHAT.
       </h3>
-      <div className=" mt-16 text-xl text-justify font-semibold">
+      <div className=" mt-16 text-xl text-justify font-semibold max-md:text-lg">
         {children}
       </div>
     </motion.div>
