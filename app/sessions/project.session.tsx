@@ -27,14 +27,28 @@ export function ProjectSession() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden pb-12">
-      <h1 className="text-4xl uppercase font-bold relative left-24 max-md:text-2xl max-md:left-12">Projects</h1>
+    <section className="relative overflow-hidden">
+      <h1 className="text-4xl uppercase font-bold relative left-24 max-md:text-2xl max-md:left-12">
+        Projects
+      </h1>
       <div className="mt-14 flex items-center justify-between max-md:mt-5">
-        <h1 className="text-6xl font-black transform rotate-90 uppercase absolute -right-36 top-3/5 max-lg:mr-0">Showcase</h1>
-        <video ref={videoRef} className="max-w-[700px] object-cover min-h-[450px] max-lg:max-w-[90vw] max-md:min-h-[200px] max-sm:min-h-[300px] max-sm:max-lg:max-w-[85vw]  z-10" poster="/thumbnail.png" controls>
+        <h1 className="text-6xl font-black transform rotate-90 uppercase absolute -right-36 top-3/5 max-lg:mr-0">
+          Showcase
+        </h1>
+        <video
+          ref={videoRef}
+          className="shadow-xl max-w-[700px] object-cover min-h-[450px] max-lg:max-w-[90vw] max-md:min-h-[200px] max-sm:min-h-[300px] max-sm:max-lg:max-w-[85vw]  z-10"
+          poster="/thumbnail.png"
+          controls
+        >
           <source src="videoTest.mp4" type="video/mp4" />
         </video>
       </div>
+      <h4 className="text-3xl text-justify w-[750px] mt-12 relative left-36 font-semibold">
+        Na Anomalie Lab, transformamos ideias em resultados reais. Inovação,
+        tecnologia e soluções feitas sob medida para impulsionar seu negócio.{" "}
+        <span className="text-sm font-medium">/ Anomalie Lab.</span>
+      </h4>
     </section>
   );
 }
