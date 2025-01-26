@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "antd/dist/reset.css";
 import "./globals.css";
 import { FooterComponent } from "./components/footer.component";
 import { BuilderSession } from "./sessions/builder.session";
