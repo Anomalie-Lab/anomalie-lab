@@ -2,44 +2,37 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePreferences } from "../contexts/ContextPreferences";
+import { TbMenu4 } from "react-icons/tb";
 
 export function HeaderComponent() {
-  const { toggleLang, lang } = usePreferences();
+  const { toggleLang, lang, setMenu, menu } = usePreferences();
 
   return (
-    <header className="w-full h-32 flex text-sm justify-between items-center font-semibold uppercase">
-      <Image
-        className="shadow-2xl"
-        src="/logo.png"
-        width={50}
-        height={190}
-        alt="Logo"
-      />
-      <ul className="flex gap-20 max-md:hidden bg-white text-black border border-black p-4 px-10 rounded-full shadow-xl">
+    <header className="w-full h-32 flex text-sm justify-between items-center font-semibold uppercase z-50">
+      <Image className="shadow-2xl  bg-blend-difference text-blend-difference rounded-md" src="/logo.png" width={50} height={50} alt="Logo" />
+      <ul className="flex gap-20 max-md:hidden bg-white text-black">
         <li>
           <Link href="#" className="menu__link text-xs">
-            Projects
+            INSTAGRAM
           </Link>
         </li>
         <li>
           <Link href="#" className="menu__link text-xs">
-            Awards
+            WHATSAPP
           </Link>
         </li>
         <li>
           <Link href="#" className="menu__link text-xs">
-            Interview
+            LINKEDIN
           </Link>
         </li>
       </ul>
-      <h5>
-        <button
-          className="font-semibold text-black uppercase"
-          onClick={() => toggleLang(lang === "pt-BR" ? "en-US" : "pt-BR")}
-        >
-          {lang === "pt-BR" ? "PT" : "EN"}
-        </button>
-      </h5>
+      <button className="font-semibold text-black uppercase max-md:hidden" onClick={() => toggleLang(lang === "pt-BR" ? "en-US" : "pt-BR")}>
+        {lang === "pt-BR" ? "PT" : "EN"}
+      </button>
+      <button className={`font-semibold ${menu && "hidden"} uppercase hidden max-md:block text-3xl`} onClick={() => setMenu(!menu)}>
+        <TbMenu4 />
+      </button>
     </header>
   );
 }

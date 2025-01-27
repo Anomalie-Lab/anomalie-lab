@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode, createContext, useContext, useEffect, useState } from "react";
+import { ReactNode, createContext, useContext, useState } from "react";
 import { ContextPreferencesT } from "./types/ContextProviderT";
 
 const getInitialLang = () => {
@@ -32,13 +32,13 @@ const ProviderPreferences: React.FC<{
     lang,
     toggleLang,
     menu,
+    setMenu,
     loading,
     setLoading,
   };
 
   return <ContextPreferences.Provider value={contextValue}>{children}</ContextPreferences.Provider>;
 };
-
 export const usePreferences = () => {
   const context = useContext(ContextPreferences);
   if (!context) {

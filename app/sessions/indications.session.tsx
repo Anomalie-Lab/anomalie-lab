@@ -8,7 +8,7 @@ import "swiper/css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
-import { Parallax } from "react-parallax";
+
 function Indication({
   slide,
 }: {

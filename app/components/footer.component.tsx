@@ -26,6 +26,8 @@ export function FooterComponent() {
 
       toast({ title: "Email Added.", position: "top", description: "We've added your email for news promotions.", status: "success", duration: 12000, isClosable: true });
     } catch (error) {
+      console.log(error && "");
+
       toast({ title: "Internal Error", position: "top", description: "An internal error occurred with the server.", status: "error", duration: 12000, isClosable: true });
     }
   };
