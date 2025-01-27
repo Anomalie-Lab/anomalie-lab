@@ -5,7 +5,10 @@ import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
-
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { Parallax } from "react-parallax";
 function Indication({
   slide,
 }: {
@@ -17,11 +20,16 @@ function Indication({
     job: string;
   };
 }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
     <div className="flex flex-col gap-8 mt-32 w-full">
       <Image src="/aspas.png" alt="aspas" width={100} height={100} className="max-md:w-12" />
-      <p className="text-4xl font-medium max-w-[590px] text-justify max-lg:text-2xl max-md:text-xl">{slide.feedback}</p>
-      <div className="flex w-full justify-between items-center mt-8">
+      <motion.p ref={ref} initial={{ opacity: 0, x: -150 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 }} className="text-4xl font-medium max-w-[590px] text-justify max-lg:text-2xl max-md:text-xl">
+        {slide.feedback}
+      </motion.p>
+      <motion.div ref={ref} initial={{ opacity: 0, x: 150 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5, delay: 0.7 }} className="flex w-full justify-between items-center mt-8">
         <div>
           <div className="flex gap-4 items-center max-md:flex-col-reverse max-md:gap-2">
             <p className="font-semibold">{slide.name}</p> <span className="max-md:hidden">|</span>
@@ -31,7 +39,7 @@ function Indication({
           </div>
           <p className="text-sm mt-2 max-md:text-xs text-end max-md:mt-1">{slide.job}</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
