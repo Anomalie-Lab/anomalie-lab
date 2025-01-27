@@ -207,21 +207,20 @@ html {
 
 .card {
   max-width: 260px;
-  margin: 35px auto 0;
+  margin-top: 60px;
   width: 100%;
   height: fit-content;
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
 }
 
 .socialContainer {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: rgb(44, 44, 44);
+  background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;

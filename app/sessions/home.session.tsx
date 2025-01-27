@@ -14,24 +14,44 @@ export function HomeSession() {
 
   return (
     <section className="uppercase font-semibold max-md:min-h-[90vh]">
-      <motion.h1 ref={ref1} initial={{ opacity: 0, y: 100 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }} transition={{ duration: 0.5 }} className="text-[230px] h-56 flex relative items-center right-4  justify-between max-md:text-7xl max-md:h-fit max-md:right-1.5 max-md:mt-12">
+      <motion.h1
+        ref={ref1}
+        initial={{ opacity: 0, y: 100 }}
+        animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+        transition={{ duration: 0.5 }}
+        className="text-[230px] h-56 flex relative items-center right-4  justify-between max-md:text-7xl max-md:h-fit max-md:right-1.5 max-md:mt-12"
+      >
         <span className="drop-shadow-2xl">Lab.</span>
       </motion.h1>
-      <Parallax bgImage="/artHome.jpg" strength={400} bgImageStyle={{ objectPosition: "bottom" }}>
+      <Parallax
+        bgImage="/artHome.jpg"
+        strength={400}
+        bgImageStyle={{ objectPosition: "bottom" }}
+      >
         <div
           className="shadow-2xl
  h-96 bg-cover bg-center z-20 relative max-md:h-72 max-sm:h-56"
         ></div>
       </Parallax>
       <div className="flex items-center justify-between max-md:items-start max-md:flex-col overflow-y-hidden">
-        <motion.h1 ref={ref2} initial={{ opacity: 0, y: -150 }} animate={isInView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -150 }} transition={{ duration: 0.5 }} className="text-[230px] relative bottom-36 right-5  z-10 max-md:text-7xl max-md:h-fit max-md:right-1.5 max-md:bottom-4">
+        <motion.h1
+          ref={ref2}
+          initial={{ opacity: 0, y: -150 }}
+          animate={isInView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -150 }}
+          transition={{ duration: 0.5 }}
+          className="text-[230px] relative bottom-36 right-5  z-10 max-md:text-7xl max-md:h-fit max-md:right-1.5 max-md:bottom-4"
+        >
           <span className="drop-shadow-2xl z-0">Lab.</span>
         </motion.h1>
-        <button className="text-white flex flex-row-reverse items-center relative group w-full max-w-[340px] overflow-hidden max-md:max-w-full max-md:mt-16">
+        <button className="text-white flex flex-row-reverse items-center relative group w-full max-w-[340px] overflow-hidden max-md:max-w-full max-md:mt-12">
           <motion.span
             ref={ref2}
             initial={{ opacity: 0, width: "50px" }}
-            animate={isInView2 ? { opacity: 1, width: "288px" } : { opacity: 0, width: "50px" }}
+            animate={
+              isInView2
+                ? { opacity: 1, width: "288px" }
+                : { opacity: 0, width: "50px" }
+            }
             transition={{ duration: 0.5 }}
             className="absolute text-nowrap shadow-md
  right-0 -z-10 text-black h-full border  border-black rounded-full p-5 mr-4 group-hover:bg-[#e4e4e5] ease-linear duration-300"
