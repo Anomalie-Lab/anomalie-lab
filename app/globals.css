@@ -273,3 +273,7 @@ html {
     opacity: 1;
   }
 }
+
+.hover-content {
+  transform-style: preserve-3d;
+}
