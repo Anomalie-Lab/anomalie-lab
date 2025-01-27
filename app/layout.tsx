@@ -10,6 +10,7 @@ import { AboutSession } from "./sessions/about.session";
 import { ProjectSession } from "./sessions/project.session";
 import { Providers } from "./providers/provider";
 import { BackToTop } from "./components/back-top.componet";
+import MenuComponent from "./components/menu.component";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,8 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.anomalielab.com.br"),
   title: "Anomalie Lab - Desenvolvimento de Sites e Apps",
-  description:
-    "Especialistas em criação de sites e aplicativos personalizados, com soluções inovadoras e foco em design e experiência do usuário.",
+  description: "Especialistas em criação de sites e aplicativos personalizados, com soluções inovadoras e foco em design e experiência do usuário.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -30,8 +30,7 @@ export const metadata: Metadata = {
     title: "Anomalie Lab - Desenvolvimento de Sites e Apps",
     siteName: "Anomalie Lab",
     type: "website",
-    description:
-      "Criamos sites e aplicativos personalizados, focados em inovação e excelência. Soluções que atendem às necessidades de nossos clientes.",
+    description: "Criamos sites e aplicativos personalizados, focados em inovação e excelência. Soluções que atendem às necessidades de nossos clientes.",
     url: "https://www.anomalielab.com.br",
     images: [
       {
@@ -82,9 +81,7 @@ export default function RootLayout() {
   return (
     <html lang="en" className="max-w-screen overflow-x-hidden">
       <Providers>
-        <body
-          className={`${inter.variable} antialiased h-fit max-w-[1250px] mx-auto flex flex-col px-4 text-black`}
-        >
+        <body className={`${inter.variable} antialiased h-fit max-w-[1250px] mx-auto flex flex-col px-4 text-black`}>
           <HeaderComponent />
           <HomeSession />
           <AboutSession />
@@ -93,6 +90,7 @@ export default function RootLayout() {
           <BuilderSession />
           <FooterComponent />
           <BackToTop />
+          <MenuComponent />
         </body>
       </Providers>
     </html>
