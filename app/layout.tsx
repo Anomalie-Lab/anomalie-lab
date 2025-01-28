@@ -69,7 +69,7 @@ export const viewport = { width: "device-width", initialScale: 1.0 };
 
 export const themeColor = "#000000";
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: c }) {
   return (
     <html lang="en" className="max-w-screen overflow-x-hidden">
       <Providers>

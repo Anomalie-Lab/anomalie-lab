@@ -25,7 +25,7 @@ const ProviderPreferences: React.FC<{
   const toggleLang = (value: string) => {
     localStorage.setItem("i18nextLng", value);
     setLang(value);
-    return (window.location = window.location);
+    window.location.reload();
   };
 
   const contextValue: ContextPreferencesT = {

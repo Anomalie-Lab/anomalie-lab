@@ -27,7 +27,7 @@ function Indication({
   return (
     <div className="flex flex-col gap-8 mt-32 w-full">
       <Image src="/aspas.png" alt="aspas" width={100} height={100} className="max-md:w-12" />
-      <motion.p ref={ref} initial={{ opacity: 0, x: -150 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 }} className="text-4xl font-medium max-w-[590px] text-justify max-lg:text-2xl max-md:text-xl h-64 max-md:h-40">
+      <motion.p ref={ref} initial={{ opacity: 0, x: -150 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5, delay: 0.2 }} className="text-4xl fontmax-w-[590px] text-justify max-lg:text-2xl max-md:text-xl h-64 max-md:h-40">
         {trans.t(slide.feedback)}
       </motion.p>
       <motion.div ref={ref} initial={{ opacity: 0, x: 150 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5, delay: 0.7 }} className="flex w-full justify-between items-center mt-8">
