@@ -220,7 +220,7 @@ html {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background-color: rgb(0, 0, 0);
+  background-color: #b1b1b1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,19 +228,19 @@ html {
   transition-duration: 1s;
 }
 .containerOne:hover {
-  background-color: #d62976;
+  background-color: #000000;
   transition-duration: 0.3s;
 }
 .containerTwo:hover {
-  background-color: #ff0000;
+  background-color: #000000;
   transition-duration: 0.3s;
 }
 .containerThree:hover {
-  background-color: #0072b1;
+  background-color: #000000;
   transition-duration: 0.3s;
 }
 .containerFour:hover {
-  background-color: #128c7e;
+  background-color: #000000;
   transition-duration: 0.3s;
 }
 

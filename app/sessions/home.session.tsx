@@ -4,6 +4,7 @@ import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 import { trans } from "../libs/i18n.lib";
 import { Parallax } from "react-parallax";
+import Link from "next/link";
 
 export function HomeSession() {
   const ref1 = useRef(null);
@@ -33,7 +34,7 @@ export function HomeSession() {
       >
         <div className="shadow-2xl h-96 bg-cover bg-bottom z-20 relative max-md:h-72 max-sm:h-56"></div>
       </Parallax>
-      <div className="flex items-center justify-between max-md:items-start max-md:flex-col overflow-y-hidden">
+      <div className="flex items-center justify-between max-md:items-start max-md:flex-col overflow-hidden">
         <motion.h1
           ref={ref2}
           initial={{ opacity: 0, y: -150 }}
@@ -43,25 +44,17 @@ export function HomeSession() {
         >
           <span className="drop-shadow-2xl z-0">Lab.</span>
         </motion.h1>
-        <button className="text-white flex flex-row-reverse items-center relative group w-full max-w-[340px] overflow-hidden max-md:max-w-full max-md:mt-12">
-          <motion.span
-            ref={ref2}
-            initial={{ opacity: 0, width: "50px" }}
-            animate={
-              isInView2
-                ? { opacity: 1, width: "288px" }
-                : { opacity: 0, width: "50px" }
-            }
-            transition={{ duration: 0.5 }}
-            className="absolute text-nowrap shadow-md
- right-0 -z-10 text-black h-full border  border-black rounded-full p-5 mr-4 group-hover:bg-[#e4e4e5] ease-linear duration-300"
-          >
+        <Link
+          href="#"
+          className="cursor-pointer relative group rounded-full flex"
+        >
+          <span className="absolute pl-12 pr-32 top-1/2 -translate-y-1/2 text-nowrap group-hover:-right-[0px] right-20 p-5 duration-300 ease-linear border rounded-full -z-10 text-black/30 group-hover:text-black group-hover:border-black">
             {trans.t("CONTACT US")}
-          </motion.span>
-          <div className="p-5 bg-black text-3xl rounded-full">
-            <LiaLongArrowAltRightSolid />
-          </div>
-        </button>
+          </span>
+          <span className="p-5 bg-black block rounded-full text-white text-2xl">
+            <LiaLongArrowAltRightSolid className="group-hover:rotate-45 duration-300" />
+          </span>
+        </Link>
       </div>
     </section>
   );
