@@ -2,17 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import React, { ReactNode } from "react";
-
-import { FooterComponent } from "./components/footer.component";
-import { BuilderSession } from "./sessions/builder.session";
-import { IndicationsSession } from "./sessions/indications.session";
-import { HeaderComponent } from "./components/header.component";
-import { HomeSession } from "./sessions/home.session";
-import { AboutSession } from "./sessions/about.session";
-import { ProjectSession } from "./sessions/project.session";
 import { Providers } from "./providers/provider";
-import { BackToTop } from "./components/back-top.componet";
-import MenuComponent from "./components/menu.component";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.anomalielab.com.br"),
+  metadataBase: new URL("https://www.anomalielab.com"),
   title: "Anomalie Lab - Desenvolvimento de Sites e Apps",
   description: "Especialistas em criação de sites e aplicativos personalizados, com soluções inovadoras e foco em design e experiência do usuário.",
   icons: {
@@ -41,7 +31,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://www.anomalielab.com.br",
+    canonical: "https://www.anomalielab.com",
   },
   keywords: [
     "Anomalie Lab",
