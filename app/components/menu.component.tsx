@@ -14,7 +14,7 @@ function MenuComponent() {
       <motion.menu ref={ref} initial={{ opacity: 0 }} animate={menu ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: menu ? 0.5 : 0.25, delay: menu ? 0.5 : 0 }} className="flex flex-col gap-20 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 text-white hidden max-md:flex">
         <li>
           <Link onClick={() => setMenu(false)} href="#" className="menu__link text-2xl tracking-widest">
-            Projects
+            https://wa.link/qr8nbk Projects
           </Link>
         </li>
         <li>
@@ -30,18 +30,18 @@ function MenuComponent() {
       </motion.menu>
       <motion.ul ref={ref} initial={{ opacity: 0 }} animate={menu ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: menu ? 0.5 : 0.25, delay: menu ? 0.5 : 0 }} className="p-6 justify-between w-full items-center fixed bottom-0 left-1/2 -translate-x-1/2 z-50 text-white/50 hidden max-md:flex">
         <li>
-          <Link onClick={() => setMenu(false)} href="#" className="menu__link text-sm uppercase tracking-widest">
-            Projects
+          <Link onClick={() => setMenu(false)} href="https://wa.link/qr8nbk" target="_blank" className="menu__link text-sm uppercase tracking-widest">
+            whatsapp
           </Link>
         </li>
         <li>
-          <Link onClick={() => setMenu(false)} href="#" className="menu__link text-sm uppercase tracking-widest">
-            Awards
+          <Link onClick={() => setMenu(false)} href="https://www.instagram.com/anomalielab/" target="_blank" className="menu__link text-sm uppercase tracking-widest">
+            instagram
           </Link>
         </li>
         <li>
-          <Link onClick={() => setMenu(false)} href="#" className="menu__link text-sm uppercase tracking-widest">
-            Interview
+          <Link onClick={() => setMenu(false)} href="mailto:anomalielab@gmail.com" target="_blank" className="menu__link text-sm uppercase tracking-widest">
+            gmail
           </Link>
         </li>
       </motion.ul>
