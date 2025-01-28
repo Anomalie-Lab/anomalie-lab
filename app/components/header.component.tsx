@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePreferences } from "../contexts/ContextPreferences";
 import { TbMenu4 } from "react-icons/tb";
+import { trans } from "../libs/i18n.lib";
 
 export function HeaderComponent() {
   const { toggleLang, lang, setMenu, menu } = usePreferences();
@@ -16,20 +17,25 @@ export function HeaderComponent() {
         height={300}
         alt="Logo"
       />
-      <ul className="flex gap-20 relative right-16 max-md:hidden bg-white text-black border border-black p-4 px-10 rounded-full shadow-xl">
+      <ul className="flex gap-20 relative right-16 max-md:hidden  p-4 px-10 rounded-full ">
         <li>
           <Link href="#" className="menu__link text-xs">
-            INSTAGRAM
+            {trans.t("About Us")}
           </Link>
         </li>
         <li>
           <Link href="#" className="menu__link text-xs">
-            WHATSAPP
+            {trans.t("Projects")}
           </Link>
         </li>
         <li>
           <Link href="#" className="menu__link text-xs">
-            LINKEDIN
+            {trans.t("Indications")}
+          </Link>
+        </li>
+        <li>
+          <Link href="#" className="menu__link text-xs">
+            {trans.t("Contact")}
           </Link>
         </li>
       </ul>

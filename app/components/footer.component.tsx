@@ -9,6 +9,7 @@ import * as yup from "yup";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 import { IoMdSend } from "react-icons/io";
+import { trans } from "../libs/i18n.lib";
 
 const schema = yup.object().shape({
   email: yup
@@ -54,22 +55,22 @@ export function FooterComponent() {
         <ul className="flex flex-col flex-wrap max-h-36 gap-6 font-medium mt-7">
           <li>
             <Link href="#" className="menu__link">
-              Contact
+              {trans.t("Contact")}
             </Link>
           </li>
           <li>
             <Link href="#" className="menu__link">
-              Projects
+              {trans.t("Projects")}
             </Link>
           </li>
           <li>
             <Link href="#" className="menu__link">
-              Interviews
+              {trans.t("Indications")}
             </Link>
           </li>
           <li>
             <Link href="#" className="menu__link">
-              About Us
+              {trans.t("About Us")}
             </Link>
           </li>
         </ul>
@@ -83,7 +84,7 @@ export function FooterComponent() {
             htmlFor="email"
             className="font-medium text-sm block w-full max-md:text-center"
           >
-            Receber Novidades
+            {trans.t("Receive Updates")}
           </label>
           <div className="mt-4 w-fit">
             <div className="input-wrapper">

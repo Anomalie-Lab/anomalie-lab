@@ -19,19 +19,19 @@ export function HomeSession() {
         initial={{ opacity: 0, y: 100 }}
         animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
         transition={{ duration: 0.5 }}
-        className="text-[230px] h-56 flex relative items-center right-4  justify-between max-md:text-7xl max-md:h-fit max-md:right-1.5 max-md:mt-12"
+        className="text-[230px] h-48 flex relative items-center right-5  justify-between max-md:text-7xl max-md:h-fit max-md:right-1.5 max-md:mt-12"
       >
         <span className="drop-shadow-2xl">Lab.</span>
       </motion.h1>
       <Parallax
-        bgImage="/artHome.jpg"
+        bgImage="/TigerCort.png"
         strength={400}
-        bgImageStyle={{ objectPosition: "bottom" }}
+        bgImageStyle={{
+          objectFit: "cover", // Faz a imagem cobrir toda a área
+          objectPosition: "center", // Centraliza a imagem
+        }}
       >
-        <div
-          className="shadow-2xl
- h-96 bg-cover bg-center z-20 relative max-md:h-72 max-sm:h-56"
-        ></div>
+        <div className="shadow-2xl h-96 bg-cover bg-bottom z-20 relative max-md:h-72 max-sm:h-56"></div>
       </Parallax>
       <div className="flex items-center justify-between max-md:items-start max-md:flex-col overflow-y-hidden">
         <motion.h1
