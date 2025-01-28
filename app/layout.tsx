@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import React, { ReactNode } from "react";
+
 import { FooterComponent } from "./components/footer.component";
 import { BuilderSession } from "./sessions/builder.session";
 import { IndicationsSession } from "./sessions/indications.session";
@@ -77,21 +79,11 @@ export const viewport = { width: "device-width", initialScale: 1.0 };
 
 export const themeColor = "#000000";
 
-export default function RootLayout() {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="max-w-screen overflow-x-hidden">
       <Providers>
-        <body className={`${inter.variable} antialiased h-fit max-w-[1250px] mx-auto flex flex-col px-4 text-black`}>
-          <HeaderComponent />
-          <HomeSession />
-          <AboutSession />
-          <ProjectSession />
-          <IndicationsSession />
-          <BuilderSession />
-          <FooterComponent />
-          <BackToTop />
-          <MenuComponent />
-        </body>
+        <body className={`${inter.variable} antialiased h-fit max-w-[1250px] mx-auto flex flex-col px-4 text-black`}>{children}</body>
       </Providers>
     </html>
   );

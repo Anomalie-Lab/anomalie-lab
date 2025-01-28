@@ -14,7 +14,7 @@ export function HomeSession() {
   const isInView2 = useInView(ref2);
 
   return (
-    <section className="uppercase font-semibold max-md:min-h-[90vh]">
+    <section className="uppercase font-semibold max-md:min-h-[90vh] mt-4">
       <motion.h1
         ref={ref1}
         initial={{ opacity: 0, y: 100 }}

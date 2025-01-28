@@ -13,22 +13,22 @@ export function HeaderComponent() {
       <Image className="relative right-[70px]" src="/LogoAnomalie.png" width={300} height={300} alt="Logo" />
       <ul className="flex gap-20 relative right-16 max-md:hidden  p-4 px-10 rounded-full ">
         <li>
-          <Link href="#" className="menu__link text-xs">
+          <Link href="#about" className="menu__link text-xs">
             {trans.t("About Us")}
           </Link>
         </li>
         <li>
-          <Link href="#" className="menu__link text-xs">
+          <Link href="#projects" className="menu__link text-xs">
             {trans.t("Projects")}
           </Link>
         </li>
         <li>
-          <Link href="#" className="menu__link text-xs">
+          <Link href="#indications" className="menu__link text-xs">
             {trans.t("Indications")}
           </Link>
         </li>
         <li>
-          <Link href="#" className="menu__link text-xs">
+          <Link href="#contacts" className="menu__link text-xs">
             {trans.t("Contact")}
           </Link>
         </li>
