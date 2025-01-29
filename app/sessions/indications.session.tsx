@@ -38,7 +38,7 @@ function Indication({
               {slide.social}
             </Link>
           </div>
-          <p className="text-sm mt-2 max-md:text-xs text-end max-md:mt-1">{slide.job}</p>
+          <p className="text-sm mt-2 max-md:text-xs max-md:mt-1">{slide.job}</p>
         </div>
       </motion.div>
     </div>
@@ -48,7 +48,7 @@ function Indication({
 export function IndicationsSession() {
   const slides = [
     {
-      feedback: "Qualified and committed developers, who contributed to improving Cidade Alta’s technology. I recommend it to anyone looking for innovation and professionalism!",
+      feedback: "Qualified and committed developers, who contributed to improving Cidade Altas technology. I recommend it to anyone looking for innovation and professionalism!",
       name: "Igor 'Tony'",
       social: "@GODTONY",
       href: "https://www.instagram.com/godtony/",
