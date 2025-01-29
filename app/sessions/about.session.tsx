@@ -85,7 +85,7 @@ export function AboutSession() {
         <TabList>
           <Tab _selected={{ fontWeight: "medium" }}>
             <motion.h3 ref={ref1} initial={{ opacity: 0, y: 10 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }} transition={{ duration: 0.5 }}>
-              {trans.t("About Us")}
+              {trans.t("About")}
             </motion.h3>
           </Tab>
           <Tab _selected={{ fontWeight: "medium" }}>

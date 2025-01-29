@@ -53,7 +53,7 @@ export function ProjectSession() {
       <motion.h4 ref={ref3} initial={{ opacity: 0, x: -350 }} animate={isInView3 ? { opacity: 1, x: 0 } : { opacity: 0, x: -350 }} transition={{ duration: 0.5, delay: 0.2 }} className="flex flex-col gap-4 text-3xl text-justify w-[750px] mt-12 relative left-36 font-semibold max-md:text-xl max-md:left-0 max-md:max-w-[90%]">
         {trans.t("At Anomalie Lab, we turn ideas into real results. Innovation, technology, and tailor-made solutions to drive your business forward.")} <span className="text-sm font-medium"> Anomalie Lab.</span>
       </motion.h4>
-      <div className="w-3/5 flex justify-end">
+      <div className="w-3/5 flex justify-end max-md:w-full">
         <Link href="https://wa.link/qr8nbk" target="_blank" className="group border flex items-center gap-4 text-sm border-black px-7 py-4 font-semibold hover:bg-black hover:text-white duration-300">
           FALE COM UM ESPECIALISTA{" "}
           <span className="group-hover:rotate-45 duration-300 text-2xl">
