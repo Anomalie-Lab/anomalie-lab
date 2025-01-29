@@ -13,7 +13,7 @@ const AnimatedTabContent: React.FC<{
 
   return (
     <motion.div ref={ref} initial={{ opacity: 0 }} animate={isInView ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: 2 }} className="mx-auto">
-      <motion.h4 ref={ref} initial={{ opacity: 0, y: -100 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} transition={{ duration: 0.4 }} className="uppercase text-4xl w-1/2 text-center mx-auto font-bold pt-12 max-md:text-3xl max-md:pt-2 max-md:w-2/3 mt-12">
+      <motion.h4 ref={ref} initial={{ opacity: 0, y: -100 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }} transition={{ duration: 0.4 }} className="uppercase text-4xl w-1/2 text-center mx-auto font-bold pt-12 max-md:text-3xl max-md:pt-2 max-md:w-full mt-12">
         {trans.t(title)}
       </motion.h4>
       <motion.div ref={ref} initial={{ opacity: 0, y: 100 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }} transition={{ duration: 0.4, delay: 0.3 }} className=" mt-16 text-xl text-justify max-md:text-lg">
@@ -80,26 +80,26 @@ export function AboutSession() {
   ];
 
   return (
-    <section id="about" className="max-w-[900px] w-full mx-auto h-[700px]">
+    <section id="about" className="max-w-[900px] w-full mx-auto h-[700px] max-md:max-w-full max-md:overflow-hidden">
       <Tabs isFitted variant="unstyled">
         <TabList>
           <Tab _selected={{ fontWeight: "medium" }}>
-            <motion.h3 ref={ref1} initial={{ opacity: 0, y: 10 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }} transition={{ duration: 0.5 }}>
+            <motion.h3 className="max-md:text-sm" ref={ref1} initial={{ opacity: 0, y: 10 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }} transition={{ duration: 0.5 }}>
               {trans.t("About")}
             </motion.h3>
           </Tab>
           <Tab _selected={{ fontWeight: "medium" }}>
-            <motion.h3 ref={ref1} initial={{ opacity: 0, y: 10 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }} transition={{ duration: 0.5, delay: 0.25 }}>
+            <motion.h3 className="max-md:text-sm" ref={ref1} initial={{ opacity: 0, y: 10 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }} transition={{ duration: 0.5, delay: 0.25 }}>
               {trans.t("Technologies")}
             </motion.h3>
           </Tab>
           <Tab _selected={{ fontWeight: "medium" }}>
-            <motion.h3 ref={ref1} initial={{ opacity: 0, y: 10 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }} transition={{ duration: 0.5, delay: 0.4 }}>
+            <motion.h3 className="max-md:text-sm" ref={ref1} initial={{ opacity: 0, y: 10 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }} transition={{ duration: 0.5, delay: 0.4 }}>
               {trans.t("Differentials")}
             </motion.h3>
           </Tab>
           <Tab _selected={{ fontWeight: "medium" }}>
-            <motion.h3 ref={ref1} initial={{ opacity: 0, y: 10 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }} transition={{ duration: 0.5, delay: 0.55 }}>
+            <motion.h3 className="max-md:text-sm" ref={ref1} initial={{ opacity: 0, y: 10 }} animate={isInView1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }} transition={{ duration: 0.5, delay: 0.55 }}>
               {trans.t("Results")}
             </motion.h3>
           </Tab>

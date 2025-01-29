@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "plyr/dist/plyr.css";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
@@ -37,8 +37,20 @@ export function ProjectSession() {
     });
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Define o limite para considerar mobile
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <section id="projects" className="relative overflow-hidden">
+    <section id="projects" className="relative overflow-hidden max-md:mt-64">
       <motion.h1 ref={ref} initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }} transition={{ duration: 0.5 }} className="text-4xl uppercase font-bold relative left-24 max-md:text-2xl max-md:left-12">
         {trans.t("Projects")}
       </motion.h1>
@@ -46,14 +58,14 @@ export function ProjectSession() {
         <motion.h2 ref={ref2} initial={{ opacity: 0, x: 50, rotate: "90deg" }} animate={isInView2 ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }} transition={{ duration: 0.5, delay: 0.2 }} className="text-6xl font-black transform rotate-90 uppercase absolute -right-36 top-3/5 max-lg:mr-0">
           Showcase
         </motion.h2>
-        <video ref={videoRef} className="shadow-xl max-w-[700px] object-cover min-h-[450px] max-lg:max-w-[90vw] max-md:min-h-[200px] max-sm:min-h-[300px] max-sm:max-lg:max-w-[85vw]  z-10" poster="/TigerCort.png" controls>
-          <source src="videoTest.mp4" type="video/mp4" />
+        <video ref={videoRef} className="shadow-xl max-w-[700px] object-cover min-h-[450px] max-lg:max-w-[90vw] max-md:min-h-[200px] max-sm:min-h-[300px] max-sm:max-lg:max-w-[85vw]  z-10" poster={isMobile ? "/TigerCort3.png" : "/TigerCort2.png"} controls>
+          <source src="https://firebasestorage.googleapis.com/v0/b/assets-portifolio.appspot.com/o/Anomalie%20(1).mp4?alt=media&token=7ef130d9-5112-4ce8-a4c4-7f897d668638" type="video/mp4" />
         </video>
       </div>
-      <motion.h4 ref={ref3} initial={{ opacity: 0, x: -350 }} animate={isInView3 ? { opacity: 1, x: 0 } : { opacity: 0, x: -350 }} transition={{ duration: 0.5, delay: 0.2 }} className="flex flex-col gap-4 text-3xl text-justify w-[750px] mt-12 relative left-36 font-semibold max-md:text-xl max-md:left-0 max-md:max-w-[90%]">
+      <motion.h4 ref={ref3} initial={{ opacity: 0, x: -250 }} animate={isInView3 ? { opacity: 1, x: 0 } : { opacity: 0, x: -250 }} transition={{ duration: 0.5, delay: 0.2 }} className="flex flex-col gap-4 text-3xl text-justify w-[750px] mt-12 relative left-36 font-semibold max-md:text-lg max-md:left-0 max-md:max-w-[90%] ">
         {trans.t("At Anomalie Lab, we turn ideas into real results. Innovation, technology, and tailor-made solutions to drive your business forward.")} <span className="text-sm font-medium"> Anomalie Lab.</span>
       </motion.h4>
-      <div className="w-3/5 flex justify-end max-md:w-full">
+      <div className="w-3/5 flex justify-end max-md:w-full mt-9">
         <Link href="https://wa.link/qr8nbk" target="_blank" className="group border flex items-center gap-4 text-sm border-black px-7 py-4 font-semibold hover:bg-black hover:text-white duration-300">
           FALE COM UM ESPECIALISTA{" "}
           <span className="group-hover:rotate-45 duration-300 text-2xl">

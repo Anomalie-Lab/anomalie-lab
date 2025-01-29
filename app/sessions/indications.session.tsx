@@ -78,7 +78,7 @@ export function IndicationsSession() {
   ];
 
   return (
-    <section id="indications" className="relative mt-64">
+    <section id="indications" className="relative mt-64 max-md:mt-80">
       <h2 className="font-bold relative uppercase text-4xl w-[90%] max-md:text-3xl text-end max-md:-mb-16">{trans.t("Indications")}</h2>
       <div className="absolute bottom-0 right-9 z-50 max-lg:bottom-6 group">
         <button className="swiper-button-next button-next-indication p-7 z-50 group-hover:rotate-45 duration-300 bg-white text-4xl border-2 rounded-full relative duration-400 ease-linear hover:bg-black hover:text-white max-md:p-2 max-md:text-2xl" aria-label="Next Slide">

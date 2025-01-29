@@ -48,10 +48,10 @@ export function FooterComponent() {
   };
 
   return (
-    <footer className="flex w-full justify-between items-center h-[500px] max-md:flex-col-reverse">
-      <div className="flex flex-col gap-7">
-        <Image alt="logo-name" src="/logo-name.png" width={200} height={200} />
-        <ul className="flex flex-col flex-wrap max-h-36 gap-6 font-medium mt-7">
+    <footer className="flex w-full justify-between items-center h-[500px] max-md:flex-col-reverse max-md:pb-14 max-md:mt-28">
+      <div className="flex flex-col gap-7 max-md:mt-24 w-fit max-md:w-44 max-md:items-center">
+        <Image alt="logo-name" src="/logo-name.png" width={200} height={200} className="max-md:w-36" />
+        <ul className="flex flex-col flex-wrap max-h-36 gap-6 font-medium mt-7 max-md:max-h-24 w-full">
           <li>
             <Link href="#contacts" className="menu__link">
               {trans.t("Contact")}
@@ -74,8 +74,8 @@ export function FooterComponent() {
           </li>
         </ul>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)} className="max-md:w-full flex flex-col max-md:flex-col-reverse max-md:mt-12">
-        <div>
+      <form onSubmit={handleSubmit(onSubmit)} className="max-md:w-full flex flex-col max-md:flex-col-reverse max-md:mt-24">
+        <div className="max-md:flex flex-col items-center">
           <label htmlFor="email" className="font-medium text-sm block w-full max-md:text-center">
             {trans.t("Receive Updates")}
           </label>

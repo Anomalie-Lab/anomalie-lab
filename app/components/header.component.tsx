@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePreferences } from "../contexts/ContextPreferences";
-import { TbMenu4 } from "react-icons/tb";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { trans } from "../libs/i18n.lib";
 
 export function HeaderComponent() {
@@ -10,7 +10,7 @@ export function HeaderComponent() {
 
   return (
     <header className="w-full h-32 flex text-sm justify-between items-center font-semibold uppercase">
-      <Image className="relative right-[70px]" src="/LogoAnomalie.png" width={300} height={300} alt="Logo" />
+      <Image className="relative max-md:w-32" src="/logo-name.png" width={130} height={130} alt="Logo" />
       <ul className="flex gap-20 relative right-16 max-md:hidden  p-4 px-10 rounded-full ">
         <li>
           <Link href="#about" className="menu__link text-xs">
@@ -37,7 +37,7 @@ export function HeaderComponent() {
         {lang === "en-US" ? "PT" : "EN"}
       </button>
       <button className={`font-semibold ${menu && "hidden"} uppercase hidden max-md:block text-3xl`} onClick={() => setMenu(!menu)}>
-        <TbMenu4 />
+        <RxHamburgerMenu />
       </button>
     </header>
   );

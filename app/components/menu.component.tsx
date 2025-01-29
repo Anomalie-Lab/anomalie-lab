@@ -46,7 +46,7 @@ function MenuComponent() {
           </Link>
         </li>
         <li>
-          <button className="font-semibold text-white uppercase " onClick={() => toggleLang(lang === "pt-BR" ? "en-US" : "pt-BR")}>
+          <button className="font-semibold text-black uppercase bg-white p-3 rounded-full" onClick={() => toggleLang(lang === "pt-BR" ? "en-US" : "pt-BR")}>
             {lang === "en-US" ? "PT" : "EN"}
           </button>
         </li>
