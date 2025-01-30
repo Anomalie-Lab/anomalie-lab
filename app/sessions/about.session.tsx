@@ -80,7 +80,7 @@ export function AboutSession() {
   ];
 
   return (
-    <section id="about" className="max-w-[900px] w-full mx-auto h-[700px] max-md:max-w-full max-md:overflow-hidden">
+    <section id="about" className="max-w-[900px] w-full mx-auto h-[700px] max-md:h-[720px]  max-md:max-w-full max-md:overflow-hidden">
       <Tabs isFitted variant="unstyled">
         <TabList>
           <Tab _selected={{ fontWeight: "medium" }}>

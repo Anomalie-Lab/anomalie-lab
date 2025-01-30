@@ -50,7 +50,7 @@ export function ProjectSession() {
   }, []);
 
   return (
-    <section id="projects" className="relative overflow-hidden max-md:mt-64">
+    <section id="projects" className="relative overflow-hidden max-md:mt-44">
       <motion.h1 ref={ref} initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }} transition={{ duration: 0.5 }} className="text-4xl uppercase font-bold relative left-24 max-md:text-2xl max-md:left-12">
         {trans.t("Projects")}
       </motion.h1>
@@ -66,7 +66,7 @@ export function ProjectSession() {
         {trans.t("At Anomalie Lab, we turn ideas into real results. Innovation, technology, and tailor-made solutions to drive your business forward.")} <span className="text-sm font-medium"> Anomalie Lab.</span>
       </motion.h4>
       <div className="w-3/5 flex justify-end max-md:w-full mt-9">
-        <Link href="https://wa.link/qr8nbk" target="_blank" className="group border flex items-center gap-4 text-sm border-black px-7 py-4 font-semibold hover:bg-black hover:text-white duration-300">
+        <Link href="https://wa.link/qr8nbk" target="_blank" className="group border flex items-center gap-4 text-sm border-black px-7 py-4 max-md:text-xs max-md:px-4 max-md:py-2 font-semibold hover:bg-black hover:text-white duration-300">
           FALE COM UM ESPECIALISTA{" "}
           <span className="group-hover:rotate-45 duration-300 text-2xl">
             {" "}
