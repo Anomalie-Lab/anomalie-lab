@@ -43,7 +43,7 @@ export function HomeSession() {
         <motion.h1 ref={ref2} initial={{ opacity: 0, y: isMobile ? -40 : -150 }} animate={isInView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? -40 : -150 }} transition={{ duration: 0.5 }} className="text-[230px] z-20 relative bottom-36 right-5 max-md:text-8xl max-md:h-fit max-md:right-1.5 max-md:bottom-6">
           <span className="drop-shadow-2xl z-0">Lab.</span>
         </motion.h1>
-        <Link href="https://wa.link/qr8nbk" target="_blank" className="relative group rounded-full max-md:ml-auto h-44 -mt-16 max-md:mt-24">
+        <Link href="https://wa.link/qr8nbk" target="_blank" className="relative group rounded-full max-md:ml-auto h-44 -mt-16 max-md:mt-16">
           <div className="absolute z-0 right-0 text-nowrap py-5 rounded-full border border-black text-sm uppercase font-semibold w-80 text-center group-hover:w-16 duration-300">{trans.t("CONTACT US")}</div>
           <div className="w-16 h-16 text-3xl rounded-full text-white bg-black flex items-center justify-center z-10">
             <LiaLongArrowAltRightSolid className="group-hover:rotate-45 duration-300" />

@@ -50,7 +50,7 @@ export function ProjectSession() {
   }, []);
 
   return (
-    <section id="projects" className="relative overflow-hidden max-md:mt-44">
+    <section id="projects" className="relative overflow-hidden max-md:mt-32">
       <motion.h1 ref={ref} initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }} transition={{ duration: 0.5 }} className="text-4xl uppercase font-bold relative left-24 max-md:text-2xl max-md:left-12">
         {trans.t("Projects")}
       </motion.h1>
